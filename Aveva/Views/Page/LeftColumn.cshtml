@@ -1,0 +1,48 @@
+﻿@model Aveva.Models.Models.ColumnModel
+
+
+
+<ul class="left-navi">
+    @foreach (var item in Model.navigation)
+    {
+        <li>
+            @if (item.subnavigationText == Model.currentNavigationItem)
+            {
+                <a href="@item.subnavigationUrl" class="sel">@item.subnavigationText</a>
+            }
+            else
+            {
+                <a href="@item.subnavigationUrl">@item.subnavigationText</a>
+            }
+        </li>
+    }
+</ul>
+
+@foreach (var gadget in Model.gadgets)
+{
+    <div class="box">
+        <h2 class="blue">@Html.Raw(gadget.header)</h2>
+        <p style="margin-top:10px">
+            @Html.Raw(gadget.content)
+        </p>
+        @if (gadget.link != "")
+        {
+            <a href="@gadget.link" target="_blank" class="more" title="@Html.Raw(gadget.header)">@gadget.linkText</a>
+        }
+</div>
+}
+
+@*<div class="box">
+    <h2 class="blue">Quick Product Details</h2><p style="margin-top:10px">
+        <a href="/Products_and_Services/Product_Finder.aspx"><img style="width: 80px; height: 80px;  margin-right: 20px;border: 0px solid; float:left" alt="AVEVA Product Finder" src="/~/media/Aveva/English/Images/Page Content/Home Page/banner_product_finder.png?la=en" /></a>
+        Looking for information about AVEVA's market-leading products?
+    </p>
+    <div style="clear: both;">
+        <br />
+    </div><a class="more" href="/en/Products_and_Services/Product_Finder.aspx">AVEVA Product Finder</a>
+</div><div class="box">
+    <h2 class="blue">Download the Paper!</h2><p><a href="/~/media/Aveva/English/Resources/White_Papers/Technology/AVEVA-Business-Paper-The-Digital-Asset-Approach.pdf?la=en" target="_blank" title="Download the Digital Asset Business Paper"><img height="276" alt="The Digital Asset Approach" width="200" src="/~/media/Aveva/English/Images/Thumbnails/White-Papers/Digital-Asset-Approach-Business-Paper-cover-200px.png?h=276&amp;w=200&la=en" style="height: 276px; width: 200px;" /></a></p>
+    <p>
+        <a href="/~/media/Aveva/English/Resources/White_Papers/Technology/AVEVA-Business-Paper-The-Digital-Asset-Approach.pdf?la=en" target="_blank" class="more" title="Download the Digital Asset Business Paper">Download</a>
+    </p>
+</div><div class="box"><h2 class="blue">Read the ARC view</h2><p><a href="/~/media/Aveva/English/Resources/White_Papers/Info Mgmt/ARC-view-AVEVA-Digital-Asset-2014.pdf?la=en" title="Downloads pdf document in a new window" target="_blank"><img style="width: 100px; float: left; height: 128px;border: 0px solid; margin-right: 5px;" alt="ARC view - AVEVA&rsquo;s Approach for the Digital Asset" src="/~/media/Aveva/English/Images/Page Content/The_AVEVA_Solution/Digital-Asset/ARC-view-Digital-Asset-2014.png?la=en" /></a><em>'Digital Asset information must be &ldquo;living,&rdquo; that is, it must be current, actionable, and address all the domains of the plant lifecycle.'</em></p><a class="more" title="Downloads pdf document in a new window" href="/~/media/Aveva/English/Resources/White_Papers/Info Mgmt/ARC-view-AVEVA-Digital-Asset-2014.pdf" target="_blank">Download</a></div><div class="box box-last"><h2 class="blue">Download the brochure</h2><p><a href="/~/media/Aveva/English/Resources/Brochures-business/AVEVA-Digital-Asset-brochure.pdf?la=en" title="Downloads pdf document in a new window" target="_blank"><em><img style="width: 100px; float: left; height: 140px;border: 0px solid; margin-right: 5px;" alt="AVEVA Digital Asset brochure" src="/~/media/Aveva/English/Images/Page Content/The_AVEVA_Solution/Digital-Asset/AVEVA-Digital-Asset-brochure.png?la=en" /></em></a>'<em>Accuracy and reliability of information are critical for all applications and for decision making.</em></p><a class="more" title="Downloads pdf document in a new window" href="/~/media/Aveva/English/Resources/Brochures-business/AVEVA-Digital-Asset-brochure.pdf" target="_blank">Download</a></div>*@

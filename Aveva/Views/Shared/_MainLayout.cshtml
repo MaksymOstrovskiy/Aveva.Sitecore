@@ -1,0 +1,118 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d0d11ee37a","applicationID":"3960779","transactionName":"Z11SbBZYWUAFBkBZW14XcWs0FltSHQpBREcfVVFRChdWQBQd","queueTime":6,"applicationTime":1247,"ttGuid":"90885BC9DA5EC3A2","agent":""}</script>
+    <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(e,t){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,t)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(u,function(e,t){newrelic[t]=r(f+t,"api")}),i(c,function(e,t){newrelic[t]=r(f+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?u(e,a,i):i()}function n(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,c=0;u>c;c++)a[c].apply(i,r);var s=f[g[n]];return s&&s.push([m,n,r,i]),i}function p(e,t){w[e]=l(e).concat(t)}function l(e){return w[e]||[]}function d(e){return s[e]=s[e]||o(n)}function v(e,t){c(e,function(e,n){t=t||"feature",g[n]=t,t in f||(f[t]=[])})}var w={},g={},m={on:p,emit:n,get:d,listeners:l,context:t,buffer:v};return m}function i(){return new r}var a="nr@context",u=e("gos"),c=e(2),f={},s={},p=t.exports=o();p.backlog=f},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!w++){var e=v.info=NREUM.info,t=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){c(l,function(t,n){e[t]||(e[t]=n)});var n="https"===p.split(":")[0]||e.sslForHttp;v.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=v.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=window,s=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var p=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-943.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),v=t.exports={offset:a(),origin:p,features:{},xhrWrappable:d};s.addEventListener?(s.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(s.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),u("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader"]);</script>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <title>AVEVA | Engineering software for the Plant and Marine industries</title>
+    <link href="~/css/layout.css" rel="stylesheet" />
+    <link href="~/css/tc.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui-1.9.0.custom.css" rel="stylesheet" />
+    <link href="~/css/flexslider.css" rel="stylesheet" />
+    <!--[if IE 6]><link rel="stylesheet" href="/css/ie6.css" type="text/css" media="all" charset="utf-8" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/css/ie7.css" type="text/css" media="all" charset="utf-8" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css" type="text/css" media="all" charset="utf-8" /><![endif]-->
+
+    <link href="http://www.aveva.com/rss_feeds/aveva_jobs_feed.aspx" rel="alternate" type="application/rss+xml" title="AVEVA Jobs RSS Feed" />
+    <link href="http://www.aveva.com/rss_feeds/aveva_news_feed.aspx" rel="alternate" type="application/rss+xml" title="AVEVA News RSS Feed" />
+    <link href="http://www.aveva.com/rss_feeds/aveva_events_feed.aspx" rel="alternate" type="application/rss+xml" title="AVEVA Events RSS Feed" />
+    <script src="~/js/jquery-1.7.2.min.js"></script>
+    <script src="~/js/easySlider1.7.js"></script>
+    <script src="~/js/jquery.flexslider-min.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/jquery.fancybox-media.js"></script>
+    <script src="~/js/jquery.masonry.min.js"></script>
+    <script src="~/js/global.js"></script>
+    <script src="~/js/swfobject.js"></script>
+    <!--[if IE 6]><script type="text/javascript" charset="utf-8" src="/js/ie6tabfix.js"></script><![endif]-->
+    <!--[if IE 7]><script type="text/javascript" charset="utf-8" src="/js/ie7navifix.js"></script><![endif]-->
+
+    <script type="text/javascript" src="/~/media/Microsites/LFM/Scripts/tracking-pdf-external-links/internal-pdf-downloads-gatag.ashx"></script>
+    <meta name="keywords" content="engineering software, design software, 3D design, IPE, OIM, PDMS" />
+    <meta name="description" content="Engineering &amp; Design software solutions for process plant, power generation, shipbuilding and offshore industries." />
+    <meta name="google-site-verification" content="mN9JytwKanZtu9Azk7w0S9RGt5209AA4Tl34U80M2KU" />
+    <script src="~/js/jquery.bgiframe.js"></script>
+    <script src="~/js/jquery.cookies.js"></script>
+    <script src="~/js/date.js"></script>
+    <script src="~/js/jquery.flexslider-min.js"></script>
+    <script src="~/js/slides.min.jquery.js"></script>
+    <script src="~/js/jquery-ui-1.9.0.custom.min.js"></script>
+</head>
+<body>
+    <script>
+    dataLayer = [];
+    </script>
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M7WBGQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7WBGQ');</script>
+
+    <form method="post" action="/en.aspx" id="ctl07">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUHNjM0ODc3OA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgYCBBBkZBYCZg8WAh4EVGV4dGVkAgcPZBYCZg9kFgJmD2QWAgIBDxYCHwFlZAIJEGRkFggCAQ9kFgJmD2QWAmYPZBYKAgEQFgIeCVNJdGVtR3VpZCgpWFN5c3RlbS5HdWlkLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkkNDYyYjMxMzEtNGI2My00MDM2LWIwYjUtMWUwOTNkMWZmNDViZGQCAxAWAh8CKCsEJDQ2MmIzMTMxLTRiNjMtNDAzNi1iMGI1LTFlMDkzZDFmZjQ1YmRkAgUPFgIfAQUFQ2xvc2VkAgcQFgIfAigrBCQ0NjJiMzEzMS00YjYzLTQwMzYtYjBiNS0xZTA5M2QxZmY0NWJkZAIJEBYCHwIoKwQkNDYyYjMxMzEtNGI2My00MDM2LWIwYjUtMWUwOTNkMWZmNDViZGQCBQ9kFgJmD2QWAmYQZGQWBmYPFgIfAQUDMjQ1ZAIBDxYCHgtfIUl0ZW1Db3VudAIKFhRmD2QWBGYPFQEAZAIBEBYCHwIoKwQkYjA0NDVkYWQtNjJiYi00NjgwLWE2YWYtYjM5MmRmZjhkNTZiZGQCAQ9kFgRmDxUBDWRpc3BsYXk6bm9uZTtkAgEQFgIfAigrBCRiNjM4OTFlMC01OWNmLTQ2ZTgtOWYxNy0wZGVmYjg5MDdkOGZkZAICD2QWBGYPFQENZGlzcGxheTpub25lO2QCARAWAh8CKCsEJGExYzI3N2Q1LWIyNWUtNGZjYy04ODE2LWQ1MTFjMGQ4OGI2ZGRkAgMPZBYEZg8VAQ1kaXNwbGF5Om5vbmU7ZAIBEBYCHwIoKwQkOTMzOWFlZWUtNjYxOS00ZmUzLWIwNTAtZWE5NWE3MmE5NmFkZGQCBA9kFgRmDxUBDWRpc3BsYXk6bm9uZTtkAgEQFgIfAigrBCRjNDhjN2NkYy01MTVhLTRiOTAtOGQ2ZC02OGNiZTQ1MTY5OGVkZAIFD2QWBGYPFQENZGlzcGxheTpub25lO2QCARAWAh8CKCsEJGZmNDFhZGEzLTYxMTQtNDA4MC05NzI2LTYwYzRjMDU1OGY4Y2RkAgYPZBYEZg8VAQ1kaXNwbGF5Om5vbmU7ZAIBEBYCHwIoKwQkOTM2NWVkMGYtNGY5NC00NmQxLTgwMmEtMTU5NTQ2NDJmOWYxZGQCBw9kFgRmDxUBDWRpc3BsYXk6bm9uZTtkAgEQFgIfAigrBCQ4MmRiOTk5Ni0xN2NjLTRlNTMtOWJkZS0zOWY1NjcwODY5ZjlkZAIID2QWBGYPFQENZGlzcGxheTpub25lO2QCARAWAh8CKCsEJDllNDdiMDNmLTJmZWItNGVlZi04YTQyLWI3NTJhZDEyZTU2ZGRkAgkPZBYEZg8VAQ1kaXNwbGF5Om5vbmU7ZAIBEBYCHwIoKwQkMGI4YjE3MzctN2NkNC00MWJlLTk1MGQtZTQyMTE3YTliMGI5ZGQCAg8WAh4HVmlzaWJsZWcWBAIBDxYCHwMCARYCZg9kFgICARAWAh8CKCsEJDhhYmVjODc5LTFlYjYtNGNkMC04NDYzLWI0YmU2Zjk5MDU4MWQWAmYPZBYCAgEQFgIfAigrBCQ4YWJlYzg3OS0xZWI2LTRjZDAtODQ2My1iNGJlNmY5OTA1ODFkZAICDxYCHwMCBhYMAgEPZBYCAgEQFgIfAigrBCQ3NWVlZDQ5MS02MGU3LTQ3OTctYWYxYi03N2NlNDE5ZGQ2N2ZkFgJmD2QWAmYPZBYCAgEQFgIfAigrBCQ3NWVlZDQ5MS02MGU3LTQ3OTctYWYxYi03N2NlNDE5ZGQ2N2ZkZAICD2QWAgIBEBYCHwIoKwQkMWYyNmU3N2ItNmU5My00OTc2LTllMzYtYmQzNjFmMzdmZTFlZBYCZg9kFgJmD2QWAgIBEBYCHwIoKwQkMWYyNmU3N2ItNmU5My00OTc2LTllMzYtYmQzNjFmMzdmZTFlZGQCAw9kFgICARAWAh8CKCsEJDA2Njc1YzY0LTQ4MGUtNGU1NC1hYjlmLWUwMDcwYzIyOTFjMGQWAmYPZBYCZg9kFgICARAWAh8CKCsEJDA2Njc1YzY0LTQ4MGUtNGU1NC1hYjlmLWUwMDcwYzIyOTFjMGRkAgQPZBYCAgEQFgIfAigrBCQyYzhiYTNiMy01NzljLTQ3OWMtYjY3MS1jMzZmNTI1YWZmYzhkFgJmD2QWAmYPZBYCAgEQFgIfAigrBCQyYzhiYTNiMy01NzljLTQ3OWMtYjY3MS1jMzZmNTI1YWZmYzhkZAIFD2QWAgIBEBYCHwIoKwQkNTUwNzJlOTUtNTcyYi00MGRiLWE4OTYtNDAyZWE5MzkwYWZiZBYCZg9kFgJmD2QWAgIBEBYCHwIoKwQkNTUwNzJlOTUtNTcyYi00MGRiLWE4OTYtNDAyZWE5MzkwYWZiZGQCBg9kFgICARAWAh8CKCsEJGE0ZGZiNjBlLTQyZDEtNGI0NC1iNjQ5LTg5NjZlZDIxMTY4NWQWAmYPZBYCZg9kFgICARAWAh8CKCsEJGE0ZGZiNjBlLTQyZDEtNGI0NC1iNjQ5LTg5NjZlZDIxMTY4NWRkAgkPZBYCZg9kFgJmD2QWBAIBDxYCHwEFHmNsYXNzPSJjb250ZW50LWxpbmVzIGNsZWFyZml4ImQCBw8WAh8BBQxpZD0ibGFuZGluZyJkAg0PZBYCZg9kFgJmD2QWBgIBDxYCHwEFE0Nvb2tpZSBQcmVmZXJlbmNlczpkAgMPFgIfAQU3WW91IGFyZSBjdXJyZW50bHkgYWNjZXB0aW5nIGFsbCBjb29raWVzIGZyb20gdGhpcyBzaXRlLmQCBQ8PFgIfAQUkQ2xpY2sgaGVyZSB0byByZXNldCB5b3VyIHByZWZlcmVuY2VzZGRkDwO6n3xNiZS/96Z/xpHOkra8V9m1KZUrlirWH4QDLFA=" />
+        </div>
+        <script type="text/javascript">
+//<![CDATA[
+var shouldFade_c3e89e24cc324a9fbaa0678ea39869db = true
+    $(document).ready(function () {
+        var jSlides = $('.slides-c3e89e24cc324a9fbaa0678ea39869db');
+
+        if(jSlides.slides) {
+            jSlides.slides({
+                play: 5000, pause: 2500, generateNextPrev: true, hoverPause: true, effect: 'fade'
+            });
+        }
+    });
+                //]]>
+        </script>
+        <div class="page_margins">
+            <div class="page">
+
+                <div id="countrys" class="clearfix">
+                    <a class="global-home" title="AVEVA Global Home Page" href="/en.aspx?sc_lang=en">Global Home</a><div class="countrys-list"><ul id="items-1"><li><a title="English" href="/en.aspx?sc_lang=en">English (en-EN)</a></li><li><a title="Brazil (pt-BR)" href="/en.aspx?sc_lang=pt-BR">Portuguese (pt-BR)</a></li></ul><ul id="items-2"><li><a title="Chinese (zh-CN)" href="/en.aspx?sc_lang=zh-CN">Chinese (zh-CN)</a></li><li><a title="Latin America (es-MX)" href="/en.aspx?sc_lang=es-MX">Spanish (es-MX)</a></li></ul><ul id="items-3"><li><a title="French (fr-FR)" href="/en.aspx?sc_lang=fr-FR">French (fr-FR)</a></li><li><a title="German (de-DE)" href="/en.aspx?sc_lang=de-DE">German (de-DE)</a></li></ul><ul id="items-4"><li><a title="Spanish (es-ES)" href="/en.aspx?sc_lang=es-ES">Spanish (es-ES)</a></li><li><a title="Japanese (ja-JP)" href="/en.aspx?sc_lang=ja-JP">Japanese (ja-JP)</a></li></ul><ul id="items-5"><li><a title="Korean (ko-KR)" href="/en.aspx?sc_lang=ko-KR">Korean (ko-KR)</a></li><li><a title="Russian (ru-RU)" href="/en.aspx?sc_lang=ru-RU">Russian (ru-RU)</a></li></ul><div class="clear"></div><div class="clear"></div><div class="clear"></div><div class="clear"></div><div class="clear"></div></div>
+                </div>
+                <div id="header">
+                    @Html.Sitecore().Placeholder("header")
+                </div>
+                <div id="main">
+                    @Html.Sitecore().Placeholder("body")
+                </div>
+                <div id="footer">
+                    @Html.Sitecore().Placeholder("footer")
+                </div>
+                <div id="footer-bottom"></div>
+
+
+                <div id="meta-navi" class="clearfix">
+                    <div class="wrap">
+                        <script type="text/javascript">
+                            var addthis_config =
+                            {
+                                ui_language: "en"
+                            }
+                        </script>
+                        <div class="addthis_button button-share" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=xa-4d77853b335fc303">
+                        </div>
+                        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4d77853b335fc303"></script>
+                        <ul id="meta" class="clearfix"><li><a title="Home" href="/en.aspx">Home</a><span>|</span></li><li><a title="Website Terms of Use" href="/en/Terms_of_Use.aspx">Terms of Use</a><span>|</span></li><li><a title="AVEVA Privacy Policy" href="/en/Privacy_Policy.aspx">Privacy Policy</a><span>|</span></li><li><a title="Sitemap" href="/en/Sitemap.aspx">Sitemap</a><span>|</span></li><li><a title="Contact AVEVA" href="/en/Contact.aspx">Contact Us</a></li></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿@model Aveva.Models.Models.HeaderViewModel
+<div class="wrap">
+    <a href="/Index" id="logo" style="background: url('@Model.logoImage')">AVEVA</a>
+    <div class="print-logo"><img src="@Model.logoImage" /></div>
+    <div id="login"><a class="aveva-world" title="AVEVA WORLD" href="#" style="background: url('@Model.avevaWorldImage')">AVEVA WORLD</a></div>
+    <div id="quick-search">
+        <script>
+
+        (function () {
+            var cx = '004085358937423836264:vvapdvykqhw';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//www.google.com/cse/cse.js?&cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+
+
+
+        $(document).ready(function () {
+            var searchStr = 'Search';
+
+            function pollSiteSearch(count) {
+                if (jQuery('#gsc-i-id1')[0] === undefined && count < 100) {
+                    setTimeout(function(){ pollSiteSearch(++count) }, 100);
+                } else if (!jQuery('#gsc-i-id1').is(":focus")){
+                    jQuery('#gsc-i-id1').attr("value", searchStr);
+                    jQuery('#gsc-i-id1').attr("title", searchStr);
+                }
+            } pollSiteSearch(0);
+
+            jQuery('#quick-search').on('blur', '#gsc-i-id1', function () {
+                if (jQuery('#gsc-i-id1').attr("value") == "") {
+                    jQuery('#gsc-i-id1').attr("value", searchStr);
+                }
+            });
+            jQuery('#quick-search').on('focus', '#gsc-i-id1', function () {
+                if (jQuery('#gsc-i-id1').attr("value") == searchStr) {
+                    jQuery('#gsc-i-id1').attr("value", "");
+                }
+            });
+            jQuery('#quick-search').on('DOMSubtreeModified', function (e) {
+                if (jQuery('.gsc-results-wrapper-overlay').css("visibility") == "visible") {
+                    jQuery('input').blur();
+                }
+            });
+
+            jQuery("#quick-search").on('click', '.gsc-search-button-v2', function (e) {
+                e.stopImmediatePropagation();
+                dataLayer.push({'event': 'search-performed', 'virtualPageName': virtualPageName()});
+            });
+
+            jQuery("#quick-search").on('keyup', '#gsc-i-id1', function (e) {
+                if (e.keyCode == 13) {
+                    e.stopImmediatePropagation();
+                    dataLayer.push({ 'event': 'search-performed', 'virtualPageName': virtualPageName() });
+                }
+            });
+
+            var virtualPageName = function () {
+                var url = window.location.href;
+                var searchTerm = jQuery('#gsc-i-id1').val();
+                return url + queryStringPrefix(url) + 'query=' + searchTerm;
+            }
+
+            var queryStringPrefix = function (url) {
+                if (url.indexOf('?') > -1) {
+                    return '&';
+                } else {
+                    return '?';
+                }
+            }
+
+        });
+        </script>
+        <style>
+            #header #quick-search .gsc-above-wrapper-area-container {
+                background: url(@Model.searchImage) no-repeat;
+                background-position: 50% 7px;
+                height: 55px;
+            }
+        </style>
+        <gcse:search linktarget="_parent"></gcse:search>
+    </div>
+    <ul id="nav" class="clearfix">
+        @foreach (var nav in Model.mainNavigationItems)
+        {
+
+            <li>
+                <a href="@nav.navigationUrl">
+                    @nav.navigationText
+                </a>
+                <div class="dd">
+                    <ul>
+                        @foreach (var subNav in nav.subnavigationItems)
+                        {
+
+                            <li>
+                                <a href="@subNav.subnavigationUrl">
+                                    @subNav.subnavigationText
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </li>
+
+        }
+    </ul>
+</div>

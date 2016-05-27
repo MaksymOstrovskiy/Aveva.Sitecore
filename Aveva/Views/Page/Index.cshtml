@@ -1,0 +1,158 @@
+﻿@model Aveva.Models.Models.PageModel
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var slider = $('.slides-c3e89e24cc324a9fbaa0678ea39869db');
+
+        if (slider !== undefined && slider !== null) {
+
+            if (!($.browser.msie) || ($.browser.msie && parseInt($.browser.version) > 8)) {
+                /*fadeOutControls();*/
+                attachFadesc3e89e24cc324a9fbaa0678ea39869db(slider);
+            }
+            else {
+                attachHideShowc3e89e24cc324a9fbaa0678ea39869db(slider);
+                slider.mouseout();
+            }
+
+            $('.next, .prev').click(function () {
+                $(this).blur();
+            });
+
+            var intervalId = '';
+
+            var sliderOffset = slider.offset();
+
+            var sliderLeft = sliderOffset.left;
+
+            var sliderTop = sliderOffset.top;
+
+            var sliderWidth = slider.width();
+
+            var sliderRight = sliderLeft + sliderWidth;
+
+            var sliderHeight = slider.height();
+
+            var sliderBottom = sliderTop + sliderHeight;
+
+            var pause = false;
+
+            $(document).mousemove(function (event) {
+                if ((event.pageX > sliderLeft && event.pageX < sliderRight) && (event.pageY > sliderTop && event.pageY < sliderTop + sliderHeight)) {
+                    clearInterval(intervalId);
+                    clearInterval(slider.data('interval'));
+                    intervalId = setInterval(function () { clearInterval(slider.data('interval')); }, 500);
+                    pause = true;
+                }
+                else {
+                    if (pause) {
+                        pause = false;
+                        clearInterval(intervalId);
+                        $('.slides_control > div').mouseout();
+                    }
+                }
+            });
+
+            var overlay = $('.sliderOverlay');
+
+            /* Show navigation overlay if links not displayed */
+            if (overlay === undefined || overlay === null || !$(overlay).is(':visible')) {
+                var navOverlay = $('.navigationOverlay');
+                if (navOverlay !== undefined && !navOverlay !== null) {
+                    navOverlay.show();
+                }
+            }
+        }
+    });
+
+    function attachFadesc3e89e24cc324a9fbaa0678ea39869db(element) {
+        if (shouldFade_c3e89e24cc324a9fbaa0678ea39869db) {
+
+            fadeOutControls(element);
+
+            element.hover(
+            function () { fadeInControls(element); },
+            function () { fadeOutControls(element); }
+        );
+
+        }
+    }
+
+    function attachHideShowc3e89e24cc324a9fbaa0678ea39869db(element) {
+        if (shouldFade_c3e89e24cc324a9fbaa0678ea39869db) {
+        element.hover(
+            function () {
+                $('.prev', element).stop().show();
+                $('.next', element).stop().show();
+            },
+            function () {
+                $('.prev', element).hide();
+                $('.next', element).hide();
+            }
+        );
+        }
+    }
+
+    function fadeOutControls(element) {
+        var speed = 1000;
+
+        $('.prev', element).fadeOut(speed);
+        $('.next', element).fadeOut(speed);
+    }
+
+    function fadeInControls(element) {
+        var speed = 'medium';
+
+        $('.prev', element).stop(true, true).fadeIn(speed);
+        $('.next', element).stop(true, true).fadeIn(speed);
+        return false;
+    }
+</script>
+<style type="text/css">
+    .sliderOverlay, .navigationOverlay {
+        width: 245px;
+    }
+
+    .htmlSlider {
+        position: relative;
+    }
+</style>
+<div id="header-content-top">
+
+</div>
+<div id="header-content-middle">
+    <div id="header-content">
+        <img src="@Model.headerImage" alt="The Digital Asset" width="978" height="200" id="header-content-img" />
+    </div>
+</div>
+
+<div id="content" class="clearfix">
+    <div class="breadcrumb">
+        <a href="/en.aspx">Home</a>
+        <img src="/images/arrow_breadcrumb.png" width="5" height="5" alt="" />
+        <span>Digital Asset</span>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="sep-content">
+
+    </div>
+    <div style="clear: both;">
+    
+    </div>
+
+    <div id="content" class="content-lines clearfix">
+        <div class="sep-content"></div>
+        <div class="col-1">
+           @Html.Sitecore().Placeholder("leftColumn")
+        </div>
+        <div class="col-2">
+            <div class="lists-interfier-wrap">
+                @Html.Raw(Model.mainColumn)
+            </div>
+        </div>
+        <div class="col-3">
+            @Html.Sitecore().Placeholder("rightColumn")
+        </div>
+        <div class="sep-content"></div>
+    </div>

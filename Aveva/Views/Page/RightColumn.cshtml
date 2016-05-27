@@ -1,0 +1,17 @@
+﻿@model Aveva.Models.Models.ColumnModel
+
+@foreach (var gadget in Model.gadgets)
+{
+    <div class="box">
+        <h2 class="blue">@Html.Raw(gadget.header)</h2>
+        <p style="margin-top:10px">
+        </p>
+            @Html.Raw(gadget.content)
+        
+        @if (gadget.link != "")
+        {
+            <a href="@gadget.link" target="_blank" class="more" title="@Html.Raw(gadget.header)">@gadget.linkText</a>
+        }
+    </div>
+}
+
